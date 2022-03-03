@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
-
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:wallpaper/model/image_model.dart';
@@ -15,10 +16,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String apiKEY = "563492ad6f91700001000001e386ced37ce24f0bba8e9db72a117295";
   ImageModel imageModel = ImageModel();
-
-  getImages() async {
+  final _controller = ScrollController();
+  int perPage = 10;
+  getImages(int perPage) async {
     var res = await http.get(
-        Uri.parse("https://api.pexels.com/v1/curated?per_page=10&page=1"),
+        Uri.parse("https://api.pexels.com/v1/curated?per_page=$perPage&page=1"),
         headers: {"Authorization": apiKEY});
     if (res.statusCode == 200) {
       //log(res.body);
@@ -30,11 +32,31 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  Widget noteWidget(String url) {
+    return CachedNetworkImage(
+      imageUrl: url,
+      placeholder: (context, url) {
+        return Center(child: CircularProgressIndicator());
+      },
+    );
+  }
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    getImages();
+    getImages(perPage);
+    _controller.addListener(() {
+      if (_controller.position.atEdge) {
+        bool isTop = _controller.position.pixels == 0;
+        if (isTop) {
+          log('At the top');
+        } else {
+          log('At the bottom');
+          getImages(perPage + 10);
+          setState(() {});
+        }
+      }
+    });
   }
 
   @override
@@ -42,12 +64,25 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          getImages();
+          getImages(perPage);
         },
       ),
       appBar: AppBar(),
       body: Container(
-        child: ListView.builder(
+        child: SingleChildScrollView(
+          controller: _controller,
+          child: StaggeredGrid.count(
+            crossAxisCount: 2,
+            children: imageModel.photos!
+                .map((e) => Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: noteWidget(e.src!.original!),
+                    ))
+                .toList(),
+          ),
+        ),
+
+        /* ListView.builder(
             shrinkWrap: true,
             itemCount: imageModel.photos!.length,
             itemBuilder: (context, int index) {
@@ -63,7 +98,7 @@ class _HomePageState extends State<HomePage> {
               } else {
                 return CircularProgressIndicator();
               }
-            }),
+            }),*/
       ),
     );
   }
