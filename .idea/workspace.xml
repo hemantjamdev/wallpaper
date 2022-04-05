@@ -22,19 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c14db1a0-1b5a-4813-a529-1f7ef65081ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/constants/Strings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/routes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/category.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/image_details.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/image_grid.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widget/image.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wallpaper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wallpaper.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home_page.dart" afterDir="false" />
-    </list>
+    <list default="true" id="c14db1a0-1b5a-4813-a529-1f7ef65081ec" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,31 +99,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="102" y="125" width="912" height="484" key="AVDManager" timestamp="1646047560542">
-      <screen x="0" y="25" width="1366" height="685" />
-    </state>
-    <state x="102" y="125" width="912" height="484" key="AVDManager/0.25.1366.685@0.25.1366.685" timestamp="1646047560542" />
-    <state width="1070" height="141" key="GridCell.Tab.0.bottom" timestamp="1646060063122">
-      <screen x="0" y="25" width="1366" height="685" />
-    </state>
-    <state width="1070" height="141" key="GridCell.Tab.0.bottom/0.25.1366.685@0.25.1366.685" timestamp="1646060063122" />
-    <state width="1070" height="141" key="GridCell.Tab.0.center" timestamp="1646060063122">
-      <screen x="0" y="25" width="1366" height="685" />
-    </state>
-    <state width="1070" height="141" key="GridCell.Tab.0.center/0.25.1366.685@0.25.1366.685" timestamp="1646060063122" />
-    <state width="1070" height="141" key="GridCell.Tab.0.left" timestamp="1646060063121">
-      <screen x="0" y="25" width="1366" height="685" />
-    </state>
-    <state width="1070" height="141" key="GridCell.Tab.0.left/0.25.1366.685@0.25.1366.685" timestamp="1646060063121" />
-    <state width="1070" height="141" key="GridCell.Tab.0.right" timestamp="1646060063122">
-      <screen x="0" y="25" width="1366" height="685" />
-    </state>
-    <state width="1070" height="141" key="GridCell.Tab.0.right/0.25.1366.685@0.25.1366.685" timestamp="1646060063122" />
-    <state x="144" y="114" key="IDE.errors.dialog" timestamp="1646058994281">
-      <screen x="0" y="25" width="1366" height="685" />
-    </state>
-    <state x="144" y="114" key="IDE.errors.dialog/0.25.1366.685@0.25.1366.685" timestamp="1646058994281" />
   </component>
 </project>

@@ -5,9 +5,11 @@ class ImageDetails extends StatefulWidget {
   final String imageName;
   final String imageUrl;
 
-  const ImageDetails(
-      {Key? key, required this.imageName, required this.imageUrl})
-      : super(key: key);
+  const ImageDetails({
+    Key? key,
+    required this.imageName,
+    required this.imageUrl,
+  }) : super(key: key);
 
   @override
   State<ImageDetails> createState() => _ImageDetailsState();
@@ -24,7 +26,7 @@ class _ImageDetailsState extends State<ImageDetails> {
         height: double.infinity,
         width: double.infinity,
         child: Hero(
-            tag: 'hero1',
+            tag: widget.imageUrl,
             child: CachedNetworkImage(
               imageUrl: widget.imageUrl,
             )),

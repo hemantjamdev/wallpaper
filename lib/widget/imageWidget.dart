@@ -6,14 +6,14 @@ Widget imageWidget(
     {required BuildContext context,
     required String name,
     required String url}) {
-  return GestureDetector(
+  return InkWell(
     onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) =>
                 ImageDetails(imageName: name, imageUrl: url))),
     child: Hero(
-      tag: 'hero1',
+tag: url,
       child: CachedNetworkImage(
         imageUrl: url,
       ),
