@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:wallpaper/screens/image_details.dart';
+import 'package:wallpaper/module/image_details/image_details.dart';
 
 Widget imageWidget(
     {required BuildContext context,

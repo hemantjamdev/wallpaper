@@ -62,7 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/constants" />
+      <recent name="$PROJECT_DIR$/lib/screen" />
+      <recent name="$PROJECT_DIR$/lib/module/image_details" />
+      <recent name="$PROJECT_DIR$/lib/module/wallpaper_grid" />
+      <recent name="$PROJECT_DIR$/lib/module/wallpaper_category" />
+      <recent name="$PROJECT_DIR$/lib/module/home_screen" />
     </key>
   </component>
   <component name="RunManager">
