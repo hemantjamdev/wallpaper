@@ -7,7 +7,7 @@ class ImageModel {
     this.nextPage,
   });
 
-  ImageModel.fromJson(Map<String,dynamic> json) {
+  ImageModel.fromJson(Map<String, dynamic> json) {
     page = json['page'];
     perPage = json['per_page'];
     if (json['photos'] != null) {
@@ -19,6 +19,7 @@ class ImageModel {
     totalResults = json['total_results'];
     nextPage = json['next_page'];
   }
+
   int? page;
   int? perPage;
   List<Photos>? photos;
@@ -66,6 +67,7 @@ class Photos {
     liked = json['liked'];
     alt = json['alt'];
   }
+
   int? id;
   int? width;
   int? height;
@@ -119,6 +121,7 @@ class Src {
     landscape = json['landscape'];
     tiny = json['tiny'];
   }
+
   String? original;
   String? large2x;
   String? large;

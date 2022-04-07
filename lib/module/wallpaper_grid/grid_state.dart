@@ -11,8 +11,6 @@ class GridLoaded extends GridState {
   GridLoaded({required this.imageModel});
 }
 
-
-
 class GridLoading extends GridState {}
 
 class GridError extends GridState {

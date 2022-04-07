@@ -15,6 +15,5 @@ Widget imageWidget(
       tag: url,
       child: CachedNetworkImage(imageUrl: thumbNail),
     ),
-
   );
 }

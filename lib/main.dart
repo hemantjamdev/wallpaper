@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wallpaper/module/wallpaper_grid/grid_bloc.dart';
 import 'package:wallpaper/routes.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -28,4 +27,3 @@ class WallpaperApp extends StatelessWidget {
     );
   }
 }
-

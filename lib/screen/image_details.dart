@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 import 'dart:ui';
 
@@ -66,8 +65,7 @@ class _ImageDetailsState extends State<ImageDetails> {
       var status = await Permission.storage.request();
       if (status.isGranted) {
         onLoading(val: true, loadingText: 'downloading', context: context);
-        var imageId = await ImageDownloader.downloadImage(imageUrl)
-            ;
+        var imageId = await ImageDownloader.downloadImage(imageUrl);
         onLoading(val: false, loadingText: 'downloading', context: context);
 
         var path = await ImageDownloader.findPath(imageId!);

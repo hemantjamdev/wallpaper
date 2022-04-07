@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
@@ -16,18 +14,16 @@ class GridBloc extends Bloc<GridEvent, GridState> {
   GridBloc() : super(GridInitial()) {
     on<GridEvent>((event, emit) async {
       if (event is GetDataEvent) {
-        log("this is get data event");
         emit(GridLoading());
         var data = await repo.getData(category: event.name);
         if (data != null) {
-          emit( GridLoaded(imageModel: data));
+          emit(GridLoaded(imageModel: data));
         } else {
           emit(GridError(errorText: 'something went wrong'));
         }
       } else if (event is GetCategoryEvent) {
-        log("this is get category event");
         emit(GridLoading());
-        log("this is category name${event.name}");
+
         var data = await repo.getData(category: event.name);
         if (data != null) {
           emit(GridLoaded(imageModel: data));

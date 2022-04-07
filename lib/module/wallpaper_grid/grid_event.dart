@@ -5,6 +5,7 @@ abstract class GridEvent {}
 
 class GetDataEvent extends GridEvent {
   final String name;
+
   GetDataEvent({required this.name});
 }
 

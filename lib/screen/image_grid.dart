@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -14,7 +13,6 @@ class ImageGrid extends StatefulWidget {
 
 class _ImageGridState extends State<ImageGrid> {
   final _controller = ScrollController();
-  int perPage = 200;
 
   @override
   void initState() {
@@ -23,14 +21,7 @@ class _ImageGridState extends State<ImageGrid> {
     _controller.addListener(() {
       if (_controller.position.atEdge) {
         bool isTop = _controller.position.pixels == 0;
-        if (!isTop) {
-          // perPage==100?page=2:page=page;
-          // perPage==100?perPage=10:perPage=perPage;
-
-          log("this is perpage ---- $perPage");
-
-          //setState(() {});
-        }
+        if (!isTop) {}
       }
     });
   }
