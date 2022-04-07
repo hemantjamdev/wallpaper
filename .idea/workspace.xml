@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
@@ -22,7 +27,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c14db1a0-1b5a-4813-a529-1f7ef65081ec" name="Default Changelist" comment="" />
+    <list default="true" id="c14db1a0-1b5a-4813-a529-1f7ef65081ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/image_details/image_details.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/image_details/image_details_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/image_details/image_details_event.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/image_details/image_details_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_category/category.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_category/category_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_category/category_event.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_category/category_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_grid/grid_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/module/wallpaper_grid/grid_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_grid/grid_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/module/wallpaper_grid/grid_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_grid/grid_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/module/wallpaper_grid/grid_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/module/wallpaper_grid/image_grid.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screen/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screen/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/imageWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/imageWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +68,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="25jj8H6npTPp5ElB8uTOq6OdMfA" />
   <component name="ProjectLevelVcsManager">
@@ -58,6 +97,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -71,6 +111,7 @@
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="additionalArgs" value="--no-sound-null-safety" />
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
@@ -102,6 +143,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

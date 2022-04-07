@@ -1,22 +1,20 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:wallpaper/module/image_details/image_details.dart';
 
 Widget imageWidget(
     {required BuildContext context,
     required String name,
-    required String url}) {
+    required String url,
+    required String thumbNail}) {
   return InkWell(
-    onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) =>
-                ImageDetails(imageName: name, imageUrl: url))),
+    onTap: () {
+      Map<dynamic, String> args = {'imageName': name, 'imageUrl': url};
+      Navigator.pushNamed(context, '/details', arguments: args);
+    },
     child: Hero(
-tag: url,
-      child: CachedNetworkImage(
-        imageUrl: url,
-      ),
+      tag: url,
+      child: CachedNetworkImage(imageUrl: thumbNail),
     ),
+
   );
 }

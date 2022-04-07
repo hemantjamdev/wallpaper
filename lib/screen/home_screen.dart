@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wallpaper/constants/Strings.dart';
-import 'package:wallpaper/module/wallpaper_category/category.dart';
-import 'package:wallpaper/module/wallpaper_grid/image_grid.dart';
+import 'package:wallpaper/screen/category.dart';
+import 'package:wallpaper/screen/image_grid.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,6 +24,9 @@ class _HomePageState extends State<HomePage> {
           Expanded(child: ImageGrid()),
         ],
       ),
+
+
+
     );
   }
 }
