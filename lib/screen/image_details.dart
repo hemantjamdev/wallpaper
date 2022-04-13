@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_downloader/image_downloader.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:share/share.dart';
+import 'package:wallpaper/ad_helper/ad_helper.dart';
 import 'package:wallpaper_manager_flutter/wallpaper_manager_flutter.dart';
 
 class ImageDetails extends StatefulWidget {
@@ -190,6 +192,15 @@ class _ImageDetailsState extends State<ImageDetails> {
     );
   }
 
+  Widget buildAdWidget() {
+    return SizedBox(
+      height: AdHelper.wallpaperDetailsBannerAd.size.height.toDouble(),
+      child: AdWidget(
+        ad: AdHelper.wallpaperDetailsBannerAd,
+      ),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -200,46 +211,59 @@ class _ImageDetailsState extends State<ImageDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        child: Hero(
-            tag: widget.map['imageUrl']!,
-            child: CachedNetworkImage(
-              imageUrl: widget.map['imageUrl']!,
-            )),
+      body: Column(
+        children: [
+          Expanded(child: buildImageWidget()),
+          buildAdWidget(),
+        ],
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              onPressed: () {
-                Platform.isAndroid
-                    ? openDialog(context, widget.map['imageUrl']!)
-                    : showToast("currently not support on iOS");
-              },
-              icon: Icon(Icons.image),
-            ),
-            IconButton(
-              onPressed: () {
-                isConnection
-                    ? downloadImage(widget.map['imageUrl']!, context)
-                    : showToast("no internet connection");
-              },
-              icon: Icon(Icons.download_rounded),
-            ),
-            IconButton(
-              onPressed: () {
-                isConnection
-                    ? shareImage(widget.map['imageUrl']!, context)
-                    : showToast("no internet connection");
-              },
-              icon: Icon(Icons.share),
-            ),
-          ],
-        ),
+      bottomNavigationBar: buildImageOption(context),
+    );
+  }
+
+  Container buildImageWidget() {
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      child: Hero(
+          tag: widget.map['imageUrl']!,
+          child: CachedNetworkImage(
+            imageUrl: widget.map['imageUrl']!,
+          )),
+    );
+  }
+
+  Padding buildImageOption(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          IconButton(
+            onPressed: () {
+              Platform.isAndroid
+                  ? openDialog(context, widget.map['imageUrl']!)
+                  : showToast("currently not support on iOS");
+            },
+            icon: Icon(Icons.image),
+          ),
+          IconButton(
+            onPressed: () {
+              isConnection
+                  ? downloadImage(widget.map['imageUrl']!, context)
+                  : showToast("no internet connection");
+            },
+            icon: Icon(Icons.download_rounded),
+          ),
+          IconButton(
+            onPressed: () {
+              isConnection
+                  ? shareImage(widget.map['imageUrl']!, context)
+                  : showToast("no internet connection");
+            },
+            icon: Icon(Icons.share),
+          ),
+        ],
       ),
     );
   }

@@ -11,7 +11,7 @@ class Category extends StatefulWidget {
 
 class _CategoryState extends State<Category> {
   int isSelected = 0;
-  List<String> categoryList = [
+  List<String> categoryList  = [
     'All',
     'cars',
     'bike',
